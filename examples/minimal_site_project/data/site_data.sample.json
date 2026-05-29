@@ -1,0 +1,22 @@
+{
+  "site_id": "minimal-site-demo",
+  "site_boundary": [[0, 0, 0], [120, 0, 0], [120, 70, 0], [0, 70, 0]],
+  "roads": [
+    {
+      "road_id": "R-01",
+      "road_type": "primary",
+      "points": [[0, 32, 0], [120, 32, 0]],
+      "notes": "Fictional east-west access line for workflow testing."
+    },
+    {
+      "road_id": "R-02",
+      "road_type": "secondary",
+      "points": [[82, 0, 0], [82, 70, 0]],
+      "notes": "Fictional north-south access line for workflow testing."
+    }
+  ],
+  "parcels": ["B-01", "B-02", "D-01", "D-02", "F-01"],
+  "coordinate_system": "local_xy",
+  "notes": "Fictional site data for validator and GH workflow testing only."
+}
+

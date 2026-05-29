@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/gh_cell_io.schema.json",
+  "title": "GH Cell IO",
+  "description": "Input and output contract for a GH Python cell.",
+  "type": "object",
+  "required": [
+    "cell_name",
+    "inputs",
+    "outputs",
+    "preview_outputs",
+    "summary_output",
+    "warnings"
+  ],
+  "properties": {
+    "cell_name": {
+      "type": "string",
+      "description": "Name of the Grasshopper Python cell."
+    },
+    "inputs": {
+      "type": "array",
+      "description": "Input ports and expected data types.",
+      "items": {
+        "$ref": "#/$defs/io_port"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "description": "Output ports and expected data types.",
+      "items": {
+        "$ref": "#/$defs/io_port"
+      }
+    },
+    "preview_outputs": {
+      "type": "array",
+      "description": "Outputs intended for separate Custom Preview components.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary_output": {
+      "type": "string",
+      "description": "Name of the output port containing summary JSON."
+    },
+    "warnings": {
+      "type": "array",
+      "description": "Known warning categories emitted by the cell.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "io_port": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+

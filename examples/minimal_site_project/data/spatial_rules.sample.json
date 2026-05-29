@@ -1,0 +1,46 @@
+{
+  "design_intent": "Create a minimal fictional site workflow that demonstrates parcel hierarchy, open space, and mobility logic without representing a real building proposal.",
+  "hierarchy_rules": [
+    {
+      "rule_id": "H-01",
+      "description": "Use B-01 as the primary massing test parcel.",
+      "applies_to": ["B-01"]
+    },
+    {
+      "rule_id": "H-02",
+      "description": "Use B-02 as a secondary mixed-use massing test parcel.",
+      "applies_to": ["B-02"]
+    }
+  ],
+  "open_space_rules": [
+    {
+      "rule_id": "O-01",
+      "description": "Keep D-02 as open space in the minimal test.",
+      "applies_to": ["D-02"]
+    }
+  ],
+  "mobility_rules": [
+    {
+      "rule_id": "M-01",
+      "description": "Use one fictional east-west access line for preview only.",
+      "applies_to": ["B-01", "B-02", "F-01"]
+    }
+  ],
+  "landscape_rules": [
+    {
+      "rule_id": "L-01",
+      "description": "Use open space parcel as landscape placeholder.",
+      "applies_to": ["D-02"]
+    }
+  ],
+  "building_groups": {
+    "primary_core_ids": ["B-01"],
+    "secondary_tod_ids": ["B-02"],
+    "tertiary_living_ids": ["D-01"],
+    "open_space_ids": ["D-02"],
+    "special_ids": ["F-01"],
+    "notes": "Embedded here for the minimal sample. Production projects can use a separate building_groups.json."
+  },
+  "notes": "Fictional rule sample for system demonstration only."
+}
+

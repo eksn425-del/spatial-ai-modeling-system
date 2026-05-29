@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/height_rules.schema.json",
+  "title": "Height Rules",
+  "description": "Height and massing permissions per parcel.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "parcel_id",
+      "max_height",
+      "min_height",
+      "allow_tower",
+      "allow_podium",
+      "hierarchy_level"
+    ],
+    "properties": {
+      "parcel_id": {
+        "type": "string",
+        "description": "Parcel ID this rule applies to."
+      },
+      "max_height": {
+        "type": "number",
+        "description": "Maximum height in project units."
+      },
+      "min_height": {
+        "type": "number",
+        "description": "Minimum height in project units."
+      },
+      "allow_tower": {
+        "type": "boolean",
+        "description": "Whether tower massing is allowed."
+      },
+      "allow_podium": {
+        "type": "boolean",
+        "description": "Whether podium massing is allowed."
+      },
+      "hierarchy_level": {
+        "type": "string",
+        "description": "Hierarchy level such as primary, secondary, tertiary, open_space, or special."
+      },
+      "notes": {
+        "type": "string",
+        "description": "Height rule notes or exceptions."
+      }
+    }
+  }
+}
+

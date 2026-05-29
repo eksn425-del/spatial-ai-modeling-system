@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/building_groups.schema.json",
+  "title": "Building Groups",
+  "description": "Parcel grouping system for hierarchy and massing generation.",
+  "type": "object",
+  "required": [
+    "primary_core_ids",
+    "secondary_tod_ids",
+    "tertiary_living_ids",
+    "open_space_ids",
+    "special_ids"
+  ],
+  "properties": {
+    "primary_core_ids": {
+      "type": "array",
+      "description": "Parcel IDs for primary cores or landmarks.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "secondary_tod_ids": {
+      "type": "array",
+      "description": "Parcel IDs for secondary transit-oriented or mixed-use zones.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tertiary_living_ids": {
+      "type": "array",
+      "description": "Parcel IDs for lower-intensity living, support, or infill areas.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_space_ids": {
+      "type": "array",
+      "description": "Parcel IDs reserved for open space or landscape.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "special_ids": {
+      "type": "array",
+      "description": "Parcel IDs requiring special handling.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notes about classification decisions."
+    }
+  }
+}
+

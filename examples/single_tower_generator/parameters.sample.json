@@ -1,0 +1,14 @@
+{
+  "pt": [0, 0, 0],
+  "height": 72,
+  "floor_count": 24,
+  "width": 18,
+  "depth": 16,
+  "style_parameters": {
+    "podium_height": 10,
+    "facade_step": 3,
+    "roof_height": 2
+  },
+  "notes": "Fictional parameter sample for testing generator IO only."
+}
+

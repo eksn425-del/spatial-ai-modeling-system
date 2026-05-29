@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/site_data.schema.json",
+  "title": "Site Data",
+  "description": "Normalized site-level data for spatial AI modeling workflows.",
+  "type": "object",
+  "required": [
+    "site_id",
+    "site_boundary",
+    "roads",
+    "parcels",
+    "coordinate_system"
+  ],
+  "properties": {
+    "site_id": {
+      "type": "string",
+      "description": "Stable identifier for the site or prototype project."
+    },
+    "site_boundary": {
+      "type": "array",
+      "description": "Ordered boundary points for the full site. Use local coordinates when real coordinates are unavailable.",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/point"
+      }
+    },
+    "roads": {
+      "type": "array",
+      "description": "Road or path records used for preview and mobility rules.",
+      "items": {
+        "type": "object",
+        "required": [
+          "road_id",
+          "points"
+        ],
+        "properties": {
+          "road_id": {
+            "type": "string",
+            "description": "Road identifier."
+          },
+          "road_type": {
+            "type": "string",
+            "description": "Optional road category such as primary, secondary, pedestrian, or service."
+          },
+          "points": {
+            "type": "array",
+            "description": "Ordered centerline or edge points.",
+            "minItems": 2,
+            "items": {
+              "$ref": "#/$defs/point"
+            }
+          },
+          "notes": {
+            "type": "string",
+            "description": "Road-specific notes or uncertainty."
+          }
+        }
+      }
+    },
+    "parcels": {
+      "type": "array",
+      "description": "Parcel records or parcel IDs. Full parcel objects should follow parcel.schema.json.",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      }
+    },
+    "coordinate_system": {
+      "type": "string",
+      "description": "Coordinate system note, for example local_xy, projected_crs_unknown, or EPSG code."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Human notes about assumptions, missing data, or Rhino/GH setup."
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "description": "A 2D or 3D coordinate point.",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}
+

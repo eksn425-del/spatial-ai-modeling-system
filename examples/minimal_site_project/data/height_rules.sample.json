@@ -1,0 +1,48 @@
+[
+  {
+    "parcel_id": "B-01",
+    "max_height": 90,
+    "min_height": 30,
+    "allow_tower": true,
+    "allow_podium": true,
+    "hierarchy_level": "primary",
+    "notes": "Fictional height rule for testing."
+  },
+  {
+    "parcel_id": "B-02",
+    "max_height": 60,
+    "min_height": 20,
+    "allow_tower": true,
+    "allow_podium": true,
+    "hierarchy_level": "secondary",
+    "notes": "Fictional height rule for testing."
+  },
+  {
+    "parcel_id": "D-01",
+    "max_height": 24,
+    "min_height": 12,
+    "allow_tower": false,
+    "allow_podium": true,
+    "hierarchy_level": "tertiary",
+    "notes": "Fictional height rule for testing."
+  },
+  {
+    "parcel_id": "D-02",
+    "max_height": 0,
+    "min_height": 0,
+    "allow_tower": false,
+    "allow_podium": false,
+    "hierarchy_level": "open_space",
+    "notes": "Open space placeholder."
+  },
+  {
+    "parcel_id": "F-01",
+    "max_height": 45,
+    "min_height": 15,
+    "allow_tower": false,
+    "allow_podium": true,
+    "hierarchy_level": "special",
+    "notes": "Special handling placeholder."
+  }
+]
+

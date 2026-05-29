@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/building_generator.schema.json",
+  "title": "Building Generator",
+  "description": "Metadata and IO definition for an individual building generator.",
+  "type": "object",
+  "required": [
+    "generator_name",
+    "style",
+    "inputs",
+    "outputs",
+    "recommended_parameters",
+    "validation_notes"
+  ],
+  "properties": {
+    "generator_name": {
+      "type": "string",
+      "description": "Name of the generator."
+    },
+    "style": {
+      "type": "string",
+      "description": "Style or formal strategy, for example simple_tower, stepped_podium, or flowing_skin_study."
+    },
+    "inputs": {
+      "type": "array",
+      "description": "Expected input parameters.",
+      "items": {
+        "$ref": "#/$defs/io_port"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "description": "Expected output ports such as glass_core, facade_lines, podium_breps, roof_breps, all_breps, and summary.",
+      "items": {
+        "$ref": "#/$defs/io_port"
+      }
+    },
+    "recommended_parameters": {
+      "type": "object",
+      "description": "Suggested parameter ranges for stable generation."
+    },
+    "validation_notes": {
+      "type": "array",
+      "description": "Human validation requirements and known visual risks.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "io_port": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+

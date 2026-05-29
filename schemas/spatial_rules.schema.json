@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/spatial_rules.schema.json",
+  "title": "Spatial Rules",
+  "description": "Design intent and spatial rule system for AI-assisted modeling.",
+  "type": "object",
+  "required": [
+    "design_intent",
+    "hierarchy_rules",
+    "open_space_rules",
+    "mobility_rules",
+    "landscape_rules"
+  ],
+  "properties": {
+    "design_intent": {
+      "type": "string",
+      "description": "Plain-language description of the spatial goal."
+    },
+    "hierarchy_rules": {
+      "type": "array",
+      "description": "Rules that describe primary, secondary, and tertiary spatial hierarchy.",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    },
+    "open_space_rules": {
+      "type": "array",
+      "description": "Rules for plazas, courtyards, setbacks, voids, and public space.",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    },
+    "mobility_rules": {
+      "type": "array",
+      "description": "Rules for roads, pedestrian paths, TOD logic, and access.",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    },
+    "landscape_rules": {
+      "type": "array",
+      "description": "Rules for landscape corridors, green pockets, water, and planting logic.",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Human notes about unresolved rule decisions."
+    }
+  },
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "required": [
+        "rule_id",
+        "description"
+      ],
+      "properties": {
+        "rule_id": {
+          "type": "string",
+          "description": "Stable rule identifier."
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable rule description."
+        },
+        "applies_to": {
+          "type": "array",
+          "description": "Optional parcel IDs or group IDs affected by this rule.",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,38 @@
+[
+  {
+    "parcel_id": "B-01",
+    "boundary_points": [[0, 0, 0], [40, 0, 0], [40, 30, 0], [0, 30, 0]],
+    "centroid": [20, 15, 0],
+    "parcel_type": "primary_core",
+    "notes": "Fictional sample parcel for workflow testing."
+  },
+  {
+    "parcel_id": "B-02",
+    "boundary_points": [[45, 0, 0], [80, 0, 0], [80, 30, 0], [45, 30, 0]],
+    "centroid": [62.5, 15, 0],
+    "parcel_type": "secondary_tod",
+    "notes": "Fictional sample parcel for workflow testing."
+  },
+  {
+    "parcel_id": "D-01",
+    "boundary_points": [[0, 35, 0], [35, 35, 0], [35, 65, 0], [0, 65, 0]],
+    "centroid": [17.5, 50, 0],
+    "parcel_type": "tertiary_living",
+    "notes": "Fictional sample parcel for workflow testing."
+  },
+  {
+    "parcel_id": "D-02",
+    "boundary_points": [[40, 35, 0], [80, 35, 0], [80, 65, 0], [40, 65, 0]],
+    "centroid": [60, 50, 0],
+    "parcel_type": "open_space",
+    "notes": "Fictional sample parcel for workflow testing."
+  },
+  {
+    "parcel_id": "F-01",
+    "boundary_points": [[85, 0, 0], [115, 0, 0], [115, 65, 0], [85, 65, 0]],
+    "centroid": [100, 32.5, 0],
+    "parcel_type": "special",
+    "notes": "Fictional sample parcel for workflow testing."
+  }
+]
+

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/spatial-ai-modeling-system/parcel.schema.json",
+  "title": "Parcel",
+  "description": "Single parcel record for spatial modeling.",
+  "type": "object",
+  "required": [
+    "parcel_id",
+    "boundary_points",
+    "centroid",
+    "parcel_type"
+  ],
+  "properties": {
+    "parcel_id": {
+      "type": "string",
+      "description": "Unique parcel identifier such as B-01."
+    },
+    "boundary_points": {
+      "type": "array",
+      "description": "Ordered polygon boundary points.",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/point"
+      }
+    },
+    "centroid": {
+      "$ref": "#/$defs/point",
+      "description": "Approximate center point used for labels, height anchors, or generator placement."
+    },
+    "parcel_type": {
+      "type": "string",
+      "description": "Parcel category such as primary_core, secondary_tod, tertiary_living, open_space, or special."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Human notes about uncertainty, source, or intended use."
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}
+
