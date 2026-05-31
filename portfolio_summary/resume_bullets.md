@@ -1,18 +1,17 @@
-# 空间 AI 建模系统｜AI-assisted Spatial Modeling Workflow
-
-- 构建了一个面向空间产品原型与生成式建模的人机协同工作流，将场地数据、地块编号、空间规则、GH Python 电池组、建筑生成器、Rhino/GH 验证和 GitHub 展示组织成可复用系统。
-- 使用 Python / RhinoCommon / Grasshopper Python 设计模块化建模模板，避免单一大型 GH 电池组控制整个城市，提高数据映射、输出检查和调试效率。
-- 建立 JSON rule system，用于表达地块分级、限高、塔楼/裙房许可、开放空间和交通景观规则。
-- 使用 Codex 进行城市尺度数据整理、规则迁移、初版 GH cells、validators 和文档化；使用 ChatGPT 辅助建筑生成器逻辑、风格拆解和视觉调试提示。
-- 在 Rhino/GH 中进行人工验证和参数调试，重点检查输出数量、summary JSON、Custom Preview、Preview/Bake 状态和复杂表皮视觉质量。
-- 将项目包装为 GitHub product skeleton，包含 skills、schemas、templates、prompts、validators、checklists、docs 和 portfolio summary。
-
 # Spatial AI Modeling System | Human-in-the-loop Design Automation Workflow
 
-- Built a human-in-the-loop spatial modeling workflow that organizes site data, parcel IDs, spatial rules, GH Python cells, building generators, Rhino/GH validation, and GitHub packaging into a reusable product system.
-- Designed modular Python / RhinoCommon / Grasshopper Python templates to avoid one oversized GH component controlling an entire city and to improve data mapping, output inspection, and debugging.
-- Developed a JSON rule system for parcel hierarchy, height limits, tower/podium permissions, open space logic, mobility rules, and landscape strategy.
-- Used Codex for city-scale data organization, rule migration, first-pass GH cells, validators, and documentation; used ChatGPT for building generator logic, style breakdown, and visual debugging prompts.
-- Validated outputs in Rhino/GH through human review, checking output counts, summary JSON, Custom Preview routing, Preview/Bake behavior, and complex facade quality.
-- Packaged the project as a GitHub-ready product skeleton with skills, schemas, templates, prompts, validators, checklists, docs, and portfolio summaries.
+## English Resume Bullets
 
+- Designed a Spatial AI Modeling System for Agent-assisted urban modeling, converting site data, parcel rules, and design intent into JSON schemas, modular GH Python cells, validators, and Rhino/Grasshopper validation workflows.
+- Built a human-in-the-loop workflow where Codex supports data structuring, rule migration, component scaffolding, and documentation, while the designer validates geometry quality, height logic, preview/bake state, and spatial intent in Rhino/GH.
+- Packaged the Maluan TOD workflow as a public-safe GitHub system release with reusable skills, schemas, prompts, validators, checklists, and interview-ready product documentation.
+
+## Chinese Resume Bullets
+
+- 设计 Spatial AI Modeling System，将马銮 TOD 参数化城市设计流程拆解为场地数据、地块规则、限高逻辑、GHPython 组件、Rhino/GH 预览验证和人工复核的 Agent-assisted 建模工作流。
+- 使用 Codex 辅助完成数据结构化、JSON rule system、GH Python 单元模板、validators 与文档化；通过 Rhino/GH 人工检查输出数量、限高规则、Preview/Bake 状态和空间质量。
+- 将项目整理为公开安全的 GitHub system release，包含 skills、schemas、prompts、templates、validators、checklists 和产品化面试说明，展示 AI Native 空间建模流程设计能力。
+
+## Short Version
+
+Built an Agent-assisted urban modeling workflow that turns spatial design intent into JSON rules, modular GH Python cells, validation metrics, and human-reviewed Rhino/Grasshopper outputs.

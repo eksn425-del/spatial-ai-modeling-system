@@ -13,11 +13,22 @@ It demonstrates how the system can be applied to a real AI-assisted spatial mode
 - How ChatGPT can help with building generator logic and visual debugging prompts.
 - How human validation closes the loop before any output is considered usable.
 
+## Product Framing
+
+This case study should be read as an **Agent-assisted urban modeling workflow**. The system does not claim to generate a final TOD design automatically. It shows how a designer can use AI to structure the modeling process:
+
+```text
+urban design intent -> structured rules -> GH Python cells -> Rhino/GH preview -> validation -> manual iteration
+```
+
+The important evidence is the workflow: what the human defines, what the Agent generates, what Rhino/GH validates, and what remains manual.
+
 ## Files
 
 - [workflow_summary.md](workflow_summary.md)
 - [screenshots_needed.md](screenshots_needed.md)
 - [asset_index.md](asset_index.md)
+- [../../docs/AGENT_WORKFLOW_CASE.md](../../docs/AGENT_WORKFLOW_CASE.md)
 
 ## What this case study is not
 
