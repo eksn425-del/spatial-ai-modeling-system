@@ -87,6 +87,7 @@ Real Rhino/GH screenshots and demo GIF will be added in a later visual release.
 ## Product Documents
 
 - [PRD-lite](docs/PRD-lite.md)
+- [AI product flow diagram](docs/AI_PRODUCT_FLOW_DIAGRAM.md)
 - [Agent workflow case](docs/AGENT_WORKFLOW_CASE.md)
 - [Input / output contract](docs/INPUT_OUTPUT_CONTRACT.md)
 - [Validation metrics](docs/VALIDATION_METRICS.md)
