@@ -8,7 +8,7 @@ Human-in-the-loop Workflow for Space Product Prototyping and Generative Modeling
 
 这个项目不是全自动建筑生成器，而是 **human-in-the-loop spatial modeling workflow**：AI 负责数据整理、规则结构、代码模板和文档化；设计者负责 Rhino/GH 预览、几何判断、视觉质量和最终取舍。
 
-**适合投递方向：** AI 产品实习生 / Agent Workflow / AI Coding / Vibe Coding / 空间智能工具产品。
+**项目关键词：** Agent-assisted Workflow、AI Coding、Vibe Coding、Rhino / Grasshopper、空间智能工具系统。
 
 ## Current Status
 
@@ -106,7 +106,7 @@ Real Rhino/GH screenshots and demo GIF will be added in a later visual release.
 - [docs/](docs/) contains system principles, limitations, and release planning.
 - [skills/](skills/) contains the reusable workflow skills.
 - [examples/minimal_site_project/](examples/minimal_site_project/) contains fictional sample data and a GH Python cell.
-- [AI 产品实习定位](docs/AI_PRODUCT_INTERNSHIP_POSITIONING_CN.md)
+- [中文产品定位说明](docs/PRODUCT_POSITIONING_CN.md)
 - [schemas/](schemas/) contains JSON contracts for data and rules.
 - [validators/](validators/) contains Python scripts for preflight checks.
 - [prompts/](prompts/) contains prompt workflows for Codex and ChatGPT.
